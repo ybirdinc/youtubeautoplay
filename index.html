@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .video {
+      margin: 0 15px;
+    }
+
+    @media screen and (min-width: 992px) {
+      .video {
+        margin: 0;
+      }
+    }
+
+    .video {
+      padding-top: calc((315 / 560) * 100%);
+      position: relative;
+    }
+
+    .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video">
+    <iframe id="ytVideo" width="560" height="315"
+      src="https://www.youtube.com/embed/Mq0yEI_xpb8?mute=1&enablejsapi=1&html5=1" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <script>
+    // global variable for the player
+    var player;
+
+    // this function gets called when API is ready to use
+    function onYouTubePlayerAPIReady() {
+      // create the global player from the specific iframe (#video)
+      player = new YT.Player('ytVideo', {
+        events: {
+          // call this function when player is ready to use
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      player.playVideo();
+    }
+
+    // Inject YouTube API script
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+</body>
+
+</html>

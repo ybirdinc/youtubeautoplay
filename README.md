@@ -18,7 +18,7 @@ Masaüstü ve laptop bilgisayarlarda video otomatik olarak oynamaya başlıyor f
 1 - Mobil cihazların en kişisel eşyalarımızdan biri olması.
 2 - Kullanıcı deneyimi.
 
-Bu iki nedeni birbirinden ayrı değil aynı anda çalışan mekanizmalar olarak düşünebiliriz. Şöyl ki:
+Bu iki nedeni birbirinden ayrı değil aynı anda çalışan mekanizmalar olarak düşünebiliriz. Şöyle ki:
 
 <h2>1 - Mobil cihazların en kişisel eşyalarımızdan biri olması:</h2>
 Toplu taşımalarda, toplantılarda, kısacası yalnız olmadığımız, topluluk içinde bulunduğumuz anlarda içinde otomatik oynatma komutuyla video bulunan bir sayfayı açtığımızda telefonumuzdan gelecek olan video sesi bütün dikkat üzerimize çekeceği gibi çevrede rahatsızlık oluşturabilir. Ben şahsen telefonumdan benim bilgim ve iradem dışında bir ses çıkmasını tercih etmem.

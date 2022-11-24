@@ -45,25 +45,26 @@
       allowfullscreen></iframe>
   </div>
   <script>
-    // global variable for the player
+    /* Önce video alanı çin bir global oluşturalım */
     var player;
 
-    // this function gets called when API is ready to use
+    /* API yüklendiği anda çalışacak fonksiyon */
     function onYouTubePlayerAPIReady() {
-      // create the global player from the specific iframe (#video)
+      /* Video iframe (id="ytVideo") kullanarak global player oluşturuyoruz  */
       player = new YT.Player('ytVideo', {
         events: {
-          // call this function when player is ready to use
+          /* player hazır olduğunda aşağıdaki fonksiyonu çağırıyoruz */
           'onReady': onPlayerReady
         }
       });
     }
 
+    /* videoyu başlatma fonksiyonu */
     function onPlayerReady(event) {
       player.playVideo();
     }
 
-    // Inject YouTube API script
+    /* YouTube API'yi sayfaya eklememiz de gerekiyor */
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/player_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
